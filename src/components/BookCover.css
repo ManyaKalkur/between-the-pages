@@ -1,0 +1,288 @@
+.bc {
+  position: fixed;
+  inset:0;
+  z-index:200;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(66, 48, 61, 0.55) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(54, 59, 46, 0.3) 0%, transparent 60%),
+    #14100F;
+  transform-origin:left center;
+  transform: perspective(2400px) rotateY(0deg);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  transition:transform 1.55s cubic-bezier(0.86, 0, 0.07, 1);
+  will-change: transform;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.bc--opening {
+  transform: perspective(2400px) rotateY(-180deg);
+}
+.bc__pages-edge {
+  position: absolute;
+  top:6px;
+  right: -5px;
+  bottom:6px;
+  width:5px;
+  background:repeating-linear-gradient(
+    to right,
+    #2a1f27 0px,
+    #2a1f27 1.5px,
+    #14100f 1.5px,
+    #14100f 3px
+  );
+  border-radius:0 1px 1px 0;
+  pointer-events:none;
+}
+.bc__spine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  background: linear-gradient(to right, rgba(0,0,0,0.55), transparent);
+  pointer-events: none;
+}
+.bc__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+}
+.bc__glow--center {
+  width: 800px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse, rgba(126, 99, 119, 0.1) 0%, transparent 70%);
+}
+.bc__glow--top {
+  width: 500px;
+  height: 350px;
+  top: -10%;
+  right: 10%;
+  background: radial-gradient(ellipse, rgba(196, 168, 130, 0.06) 0%, transparent 70%);
+}
+.bc__corner {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  pointer-events: none;
+}
+.bc__corner--tl { 
+  top:22px;
+  left:22px;
+  border-top:1px solid var(--gold-faint); 
+  border-left:1px solid var(--gold-faint);
+}
+.bc__corner--tr {
+  top: 22px;
+  right:22px; 
+  border-top:1px solid var(--gold-faint); 
+  border-right:1px solid var(--gold-faint);
+}
+.bc__corner--bl { 
+  bottom: 22px; 
+  left: 22px;
+  border-bottom: 1px solid var(--gold-faint); 
+  border-left:1px solid var(--gold-faint); 
+}
+.bc__corner--br { 
+  bottom: 22px; 
+  right: 22px; 
+  border-bottom: 1px solid var(--gold-faint); 
+  border-right:1px solid var(--gold-faint); 
+}
+.bc__frame {
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(196, 168, 130, 0.1);
+  border-radius: 1px;
+  pointer-events: none;
+}
+.bc__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 clamp(2rem, 8vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  animation: coverFadeIn 0.9s var(--ease) both;
+}
+@keyframes coverFadeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.bc__pre-title {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+.bc__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  line-height: 1;
+  margin-bottom: 1.75rem;
+}
+.bc__title-between {
+  font-family: var(--font-display);
+  font-size: clamp(60px, 11vw, 128px);
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.03em;
+  display: block;
+}
+.bc__title-the {
+  font-family: var(--font-quote);
+  font-size: clamp(20px, 3.5vw, 42px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--muted);
+  letter-spacing: 0.28em;
+  display: block;
+  margin: 0.15em 0 0.05em;
+}
+.bc__title-pages {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, 116px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--mauve);
+  letter-spacing: -0.02em;
+  display: block;
+}
+.bc__ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+}
+.bc__ornament--top { 
+  margin-bottom: 1.5rem;
+}
+.bc__ornament--mid { 
+  margin: 1.5rem 0;
+}
+.bc__orn-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-faint), transparent);
+  display: block;
+}
+.bc__orn-diamond {
+  font-size: 8px;
+  color: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+.bc__orn-text {
+  font-size: 12px;
+  color: var(--gold);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+.bc__tagline {
+  font-family: var(--font-quote);
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 2.5rem;
+}
+.bc__open-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: cueFadeIn 0.6s var(--ease) 1.2s forwards;
+}
+@keyframes cueFadeIn {
+  to { opacity: 1; }
+}
+.bc__open-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  animation: dotPulse 1.4s ease-in-out infinite;
+}
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1);   opacity: 0.6; }
+  50%       { transform: scale(1.5); opacity: 1; }
+}
+.bc__open-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+}
+.bc__foot-ornament {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: calc(100% - 100px);
+  max-width: 460px;
+  opacity: 0.45;
+  pointer-events: none;
+  animation: coverFadeIn 1s var(--ease) 0.3s both;
+}
+.bc__foot-ornament .bc__orn-text {
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--muted);
+  opacity: 1;
+}
+.bc--opening::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  background: linear-gradient(to right, rgba(0,0,0,0.35), transparent);
+  pointer-events: none;
+  opacity: 0;
+  animation: shadowReveal 0.4s var(--ease) forwards;
+}
+@keyframes shadowReveal {
+  to { opacity: 1; }
+}
+@media (max-width: 480px) {
+  .bc__corner { 
+    width: 26px; 
+    height: 26px; 
+  }
+  .bc__frame  { 
+    inset: 16px; 
+  }
+  .bc__ornament { 
+    max-width: 260px; 
+  }
+}
