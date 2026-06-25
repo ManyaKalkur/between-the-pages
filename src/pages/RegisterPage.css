@@ -1,0 +1,21 @@
+.rp-form-col {
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 25%, var(--plum) 0%, transparent 100%),
+    var(--olive);
+}
+.rp-bmp {
+  background: var(--olive);
+}
+
+.rp-title-em {
+  font-style:italic;
+  font-weight:400;
+  color: var(--plum);
+}
+
+.auth-switch__link.rp-switch-link {
+  color: var(--plum);
+}
+.auth-switch__link.rp-switch-link:hover {
+  color: #9f4184;
+}
