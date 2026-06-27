@@ -5,14 +5,13 @@
 }
 
 .auth-page__bmp {
-  width:36%;
-  max-width:400px;
+  width:20%;
+  max-width:250px;
   min-height:100vh;
   flex-shrink:0;
   position:sticky;
   top:0;
   align-self:flex-start;
-
 }
 .auth-page__form-col {
   flex:1;

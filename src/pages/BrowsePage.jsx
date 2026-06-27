@@ -6,8 +6,9 @@ import FilterBar from '../components/FilterBar'
 import Pagination from '../components/Pagination'
 import './BrowsePage.css'
 
-const PER_PAGE = 20
-
+const PER_PAGE= 20
+const FAMOUS= new Set([ 'Harry Potter and the Prisoner of Azkaban'
+])
 function transformBook(item) {
   const info= item?.volumeInfo ?? {}
   const cover= info.imageLinks?.thumbnail?.replace('http:', 'https:')?? null

@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
-import BookmarkPanel from '../components/BookmarkPanel'
 import '../styles/auth.css'
 import './RegisterPage.css'
 
@@ -142,9 +141,15 @@ export default function RegisterPage() {
             </p>
           </motion.div>
         </div>
-        <div className="auth-page__bmp rp-bmp">
-          <BookmarkPanel/>
-        </div>
+<div className="auth-page rp-page">
+  <div className="auth-page__bmp rp-bmp">
+    <img
+      src="../images/bookmark.jpg"
+      alt="Bookmark"
+      className="bookmark-image"
+    />
+  </div>
+</div>
       </div>
     </>
   )

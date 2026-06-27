@@ -5,6 +5,7 @@
 }
 .rp-bmp {
   background: var(--olive);
+  width:100%;
 }
 
 .rp-title-em {
