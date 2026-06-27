@@ -1,0 +1,57 @@
+.pag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 2.5rem 0 1rem;
+}
+
+.pag__pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pag__btn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--muted);
+  background: rgba(126,99,119,0.08);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color var(--t-fast), background var(--t-fast), border-color var(--t-fast);
+  white-space: nowrap;
+}
+.pag__btn:hover:not(:disabled) {
+  color: var(--cream);
+  border-color: rgba(126,99,119,0.4);
+}
+.pag__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.pag__btn--active {
+  background: var(--mauve);
+  border-color: var(--mauve);
+  color: var(--cream);
+  font-weight: 500;
+}
+.pag__btn--arrow {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 0 14px;
+}
+
+.pag__ellipsis {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 0 4px;
+  user-select: none;
+}
