@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Analytics } from "@vercel/analytics/next"
 import BookCover from './components/BookCover'
 import WelcomePage from './pages/WelcomePage'
 import LoginPage from './pages/LoginPage'
