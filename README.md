@@ -4,7 +4,7 @@
 
 ## What is this?
 
-**Between the Pages** is a full-stack MERN web app for readers who want more than a list of titles and star ratings. Every book on the platform gets its own atmosphere: AI summaries, curated Spotify playlists, Pinterest moodboards, reader reviews, and for the most iconic books, a full cinematic 30-second experiee thncat puts you inside the world before you open the first page.
+**Between the Pages** is a full-stack MERN web app for readers who want more than a list of titles and star ratings. Every book on the platform gets its own atmosphere: AI summaries, curated Spotify playlists, Pinterest moodboards, reader reviews, and for the most iconic books, a full cinematic 30-second experience that puts you inside the world before you open the first page.
 
 ---
 
@@ -75,24 +75,31 @@ between-the-pages/
 
 ## Getting started locally
 
+###1. Clone the repo
 ```bash
-# 1. Clone the repo
 git clone https://github.com/your-username/between-the-pages.git
 cd between-the-pages/client
+```
 
-# 2. Install dependencies
+###2. Install dependencies
+```bash
 npm install
+```
 
-# 3. Add environment variables
+###3. Add environment variables
+```bash
 cp .env.example .env
-# Then open .env and add your Google Books API key:
-# VITE_GOOGLE_BOOKS_API_KEY=your_key_here
+```
+Then open .env and add your Google Books API key:
+VITE_GOOGLE_BOOKS_API_KEY=your_key_here
 
-# 4. Start dev server
+###4. Start dev server
+```bash
 npm run dev
-
-# 5. Open in browser
-# http://localhost:5173
+```
+###5. Open in browser
+```bash
+http://localhost:5173
 ```
 
 ---
