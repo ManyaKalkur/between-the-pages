@@ -32,7 +32,7 @@ export default function App() {
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/books" element={<BrowsePage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
-        <Route path="/experience" element={<ExperiencePage/>}/>
+        <Route path="/experiences" element={<ExperiencePage/>}/>
       </Routes>
     </BrowserRouter>
   )
