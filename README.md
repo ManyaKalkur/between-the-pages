@@ -75,29 +75,29 @@ between-the-pages/
 
 ## Getting started locally
 
-###1. Clone the repo
+### 1. Clone the repo
 ```bash
 git clone https://github.com/your-username/between-the-pages.git
 cd between-the-pages/client
 ```
 
-###2. Install dependencies
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-###3. Add environment variables
+### 3. Add environment variables
 ```bash
 cp .env.example .env
 ```
 Then open .env and add your Google Books API key:
 VITE_GOOGLE_BOOKS_API_KEY=your_key_here
 
-###4. Start dev server
+### 4. Start dev server
 ```bash
 npm run dev
 ```
-###5. Open in browser
+### 5. Open in browser
 ```bash
 http://localhost:5173
 ```
