@@ -8,6 +8,7 @@ import RegisterPage from './pages/RegisterPage'
 import BrowsePage from './pages/BrowsePage'
 import AboutPage from './pages/AboutPage'
 import ExperiencePage from './pages/ExperiencePage'
+import BookDetailPage from './pages/BookDetailPage'
 
 function HomeWithIntro() {
   const [phase, setPhase] = useState('cover')
@@ -33,6 +34,9 @@ export default function App() {
         <Route path="/books" element={<BrowsePage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
         <Route path="/experiences" element={<ExperiencePage/>}/>
+        <Route path="/books/:id" element={<BookDetailPage/>}/>
+        <Route path="/admin" element={<AdminPage/>}/>
+        <Route path="/profile/:username" element={<ProfilePage/>}/>
       </Routes>
     </BrowserRouter>
   )
