@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import '../styles/auth.css'
 import './LoginPage.css'
-import bookmark from "../../images/bookmark.jpg";
+import bookmark from "../../images/bookmark.jpg"
 
 const EASE = [0.4, 0, 0.2, 1]
 function GoogleIcon() {
