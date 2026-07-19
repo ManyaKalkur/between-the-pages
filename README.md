@@ -23,7 +23,6 @@
 - Book Detail Page
 - Cinematic Experience Page
 - About Page
-- 
 ---
 
 ## Tech stack
