@@ -47,7 +47,7 @@ export default function LoginPage() {
       <div className="auth-page lp-page">
         <div className="auth-page__bmp lp-bmp">
           <img
-            src="../images/bookmark.jpg"
+            src="/images/bookmark.jpg"
             alt="Bookmark"
             className="bookmark-image"
           />
