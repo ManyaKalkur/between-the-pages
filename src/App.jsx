@@ -9,8 +9,6 @@ import BrowsePage from './pages/BrowsePage'
 import AboutPage from './pages/AboutPage'
 import ExperiencePage from './pages/ExperiencePage'
 import BookDetailPage from './pages/BookDetailPage'
-import AdminPage from './pages/AdminPage'
-import ProfilePage from './pages/ProfilePage'
 
 function HomeWithIntro() {
   const [phase, setPhase] = useState('cover')
