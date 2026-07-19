@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import '../styles/auth.css'
 import './RegisterPage.css'
+import bookmark from "../../images/bookmark.jpg"
 
 const EASE = [0.4, 0, 0.2, 1]
 function GoogleIcon() {
@@ -144,7 +145,7 @@ export default function RegisterPage() {
 <div className="auth-page rp-page">
   <div className="auth-page__bmp rp-bmp">
     <img
-      src="../images/bookmark.jpg"
+      src={bookmark}
       alt="Bookmark"
       className="bookmark-image"
     />
